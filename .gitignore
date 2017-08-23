@@ -19,3 +19,18 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Environmental configuration
+.env
+
+#VSCode metadata
+.vscode
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+ehthumbs.db
+Icon?
+Thumbs.db
