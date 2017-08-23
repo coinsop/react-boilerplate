@@ -23,7 +23,7 @@ yarn-error.log*
 # Environmental configuration
 .env
 
-#VSCode metadata
+# VSCode metadata
 .vscode
 
 # OS generated files

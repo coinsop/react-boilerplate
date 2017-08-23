@@ -3,6 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.componentName = 'App';
+  }
+
   render() {
     return (
       <div className="App">

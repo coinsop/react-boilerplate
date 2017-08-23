@@ -1,47 +1,40 @@
 {
+  "plugins": ["react"],
   "rules": {
-    "indent": [
-      2,
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ],
-    "space-before-function-paren": [
-      2,
-      {
-        "anonymous": "always",
-        "named": "never"
-      }
-    ],
-    "no-use-before-define": [
-      2,
-      "nofunc"
-    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "indent": [2, 2, {
+      "SwitchCase": 1
+    }],
+    "space-before-function-paren": [2, {
+      "anonymous": "always",
+      "named": "never"
+    }],
+    "no-use-before-define": [2, "nofunc"],
     // TODO: turn on later
-    "comma-dangle": [
-      0
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ],
-    "no-underscore-dangle": [
-      0
-    ]
+    "comma-dangle": [0],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+    "no-underscore-dangle": [0],
+    "semi": 2
   },
   "env": {
+    "es6": true,
+    "browser": true,
     "node": true,
     "mocha": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "extends": [
     "eslint:recommended",
-    "airbnb-base"
+    "airbnb-base",
+    "plugin:react/recommended"
   ]
 }
