@@ -12,6 +12,11 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },
+  "keywords": [
+    "boilerplate",
+    "coinsop",
+    "reactjs"
+  ],
   "scripts": {
     "lint": "lint-staged",
     "start": "react-scripts start",
