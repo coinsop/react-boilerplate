@@ -19,7 +19,7 @@
     "reactjs"
   ],
   "scripts": {
-    "lint": "lint-staged",
+    "lint": "eslint --fix src/**/*.{js,jsx} && stylelint --fix src/**/*.{css} && echo '> lint passed!'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -38,7 +38,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",
-    "lint-staged": "^4.0.3",
+    "ghooks": "^2.0.0",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0"
   },
@@ -51,12 +51,9 @@
       "add-module-exports"
     ]
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint --fix"
-    ],
-    "src/**/*.{css}": [
-      "stylelint --fix"
-    ]
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint && git add --all"
+    }
   }
 }
